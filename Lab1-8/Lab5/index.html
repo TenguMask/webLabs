@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Лабораторна робота №5</title>
+    <style>
+        .left,
+        .right {
+            margin: 0px;
+            height: 95vh;
+            float: left;
+        }
+        .right {
+            width: calc(100% - 250px);
+        }
+        .left {
+            width: 13.5%;
+            min-width: 225px;
+        }
+        #first-frame {
+            width: 100%;
+
+            font-size: 2em;
+            height: 95vh;
+        }
+        #second-frame {
+            width: 100%;
+            height: 95vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <iframe id="first-frame" src="menu.html" frameborder=yes></iframe>
+    </div>
+    <div class="right">
+        <iframe width=100% src="http://bing.com"></iframe>
+        <iframe name="frame" id="second-frame" ></iframe>
+    </div>
+</body>
+</html>

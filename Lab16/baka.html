@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function hit() {
+            var hit = document.getElementById("hit").innerHTML;
+            hit = hit * 1 + 1;
+            document.getElementById("hit").innerHTML = hit;
+            var img = document.getElementById("img");
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var pictureWidth = document.getElementById("img").width;
+            var pictureHeight = document.getElementById("img").height;
+            var left = Math.ceil(Math.random() * (windowWidth - pictureWidth));
+            var top = Math.floor(Math.random() * (windowHeight - pictureHeight));
+            img.style.left = left + "px";
+            img.style.top = top + "px";
+            document.getElementById("left").innerHTML = left;
+            document.getElementById("top").innerHTML = top;
+            document.getElementById("windowWidth").innerHTML = windowWidth;
+            document.getElementById("windowHeight").innerHTML = windowHeight;
+            document.getElementById("pictureWidth").innerHTML = pictureWidth;
+            document.getElementById("pictureHeight").innerHTML = pictureHeight;
+            play();
+        }
+
+        function play() {
+            var sounds = new Array(9);
+            sounds[0] = "/audio/amogus.mp3";
+            sounds[1] = "/audio/baby1.mp3";
+            sounds[2] = "/audio/baby2.mp3";
+            sounds[3] = "/audio/baka.mp3";
+            sounds[4] = "/audio/bruh.mp3";
+            sounds[5] = "/audio/imp.mp3";
+            sounds[6] = "/audio/imp.mp3";
+            sounds[7] = "/audio/nigg.mp3";
+            sounds[8] = "/audio/sussy.mp3";
+
+            var r = Math.floor(Math.random() * 9);
+            var n = sounds[r];
+            var audio = new Audio(n);
+            audio.play();
+        }
+
+        function playGay(){
+             var audio = new Audio('/audio/gay.mp3');
+            audio.play();
+        }
+
+        function miss() {
+            var miss = document.getElementById("miss").innerHTML;
+            miss = miss * 1 + 1;
+            document.getElementById("miss").innerHTML = miss;
+            playGay();
+        }
+    </script>
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <!--    <div id="counter"> <span id="hit">0</span> <span id="miss">0</span> </div>-->
+    <div id="counter"> Hit Miss:
+        <br>
+        <div id="hit">0</div>
+        <div id="miss">0</div>
+        <br> Window size:
+        <br>
+        <div id="windowWidth">0</div>
+        <div id="windowHeight">0</div>
+        <br> Picture size:
+        <br>
+        <div id="pictureWidth">0</div>
+        <div id="pictureHeight">0</div>
+        <br> Left Top:
+        <br>
+        <div id="left">0</div>
+        <div id="top">0</div>
+    </div>
+    <div id="missdiv" onclick="miss()"></div> <img id="img" src="/pics/wonder-day-among-us-21.png" onclick="hit()"> </body>
+
+</html>

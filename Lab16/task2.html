@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab16</title>
+    <script type="text/javascript">
+        function add5() {
+            var x = document.getElementById("in1").value;
+
+            if (x.length == 0) {
+                var ctn3 = document.createTextNode("Ошибка - Ничего не введено");
+            }
+            else {
+                var ctn3 = document.createTextNode(x);
+            }
+
+            var cep = document.createElement('p');
+            var cebr = document.createElement('br');
+            var cebr2 = document.createElement('br');
+            var ctn1 = document.createTextNode('TextNode#1');
+            var ctn2 = document.createTextNode('TextNode#2');
+            document.body.appendChild(cep);
+            cep.appendChild(ctn1);
+            cep.appendChild(cebr);
+            cep.appendChild(ctn2);
+            cep.appendChild(cebr2);
+            cep.appendChild(ctn3);
+
+            document.getElementById("in1").value = "";
+            //document.write("<br>" + x);
+            //if
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input id="in1" type="text" name="input1">
+        <input type="button" value="Add a line" onclick="add5();" /> </form>
+    <!--    <select id="ss"> </select>-->
+</body>
+
+</html>

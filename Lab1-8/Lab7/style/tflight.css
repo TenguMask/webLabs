@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.color1 {
+    width: calc((100vw - 18px) / 3);
+    height: 200px;
+    background-color: rgba(255, 0, 0, 0.45);
+    float: left;
+    border: 3px solid;
+    border-color: red;
+    display: none;
+}
+
+.color2 {
+    width: calc((100vw - 18px) / 3);
+    height: 200px;
+    background-color: rgba(227, 255, 0, 0.45);
+    float: left;
+    border: 3px solid;
+    border-color: #fff500;
+    visibility: hidden;
+}
+
+.color3 {
+    width: calc((100vw - 18px) / 3);
+    height: 200px;
+    background-color: rgba(6, 126, 10, 0.45);
+    float: left;
+    border: 3px solid;
+    border-color: #22aa22;
+}

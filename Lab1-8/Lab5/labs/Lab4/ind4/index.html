@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta name="author" content="Nikolaienko Artem">
+    <meta name="description" content="Ind task to lab#4 - forms">
+    <meta name="keywords" content="web site forms html">
+    <title> Ind Lab4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap');
+
+
+        body {
+            font-family: 'Roboto', monospace;
+        }
+
+        h1,h2,legend{
+            font-family: 'Russo One', sans-serif;
+        }
+
+        legend{
+            font-size: 20px;
+        }
+
+        form {
+            width: 30%;
+            min-width: 450px;
+            max-width: 500px;
+            font-size: 14px;
+            line-height: 28px;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+
+        #left {
+            width: 35%;
+        }
+
+        #fs1 {
+            background-color: rgba(250, 235, 215, 0.42);
+            width: 460px;
+        }
+
+        #fs2 {
+            background-color: rgba(95, 158, 160, 0.46);
+            width: 460px;
+        }
+
+        #fs3 {
+            background-color: rgba(127, 255, 212, 0.42);
+            width: 460px;
+        }
+
+        input#bio,
+        #tel,
+        #email,
+        #company,
+        #city,
+        #area,
+        #emp,
+        [type=text] {
+            width: 100%;
+        }
+
+        select {
+            font-size: 13px;
+            width: 100%;
+        }
+
+        #right {
+            width: 300px;
+        }
+
+        input#imagetype {
+            width: 16%;
+            margin-left: 42%;
+        }
+
+        #file {
+            margin-left: 25%;
+        }
+
+        #reset {
+            height: 30px;
+            width: 40%;
+            font-family: 'Russo One', sans-serif;
+            background-color: #e21e1e;
+            color: white;
+            margin-left: 30%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align=center> Форма звернення до </h1>
+    <h2 align=center> консалтингової компанії </h2>
+    <form>
+        <fieldset id=fs1>
+            <legend>Ідентифікація</legend>
+            <table border="0">
+                <tr>
+                    <td id="left">Прізвище*</td>
+                    <td id="right">
+                        <input type=text id="bio" required pattern="[а-я]{4-30}" autofocus> </td>
+                </tr>
+                <tr>
+                    <td id="left">Ім'я*</td>
+                    <td id="right">
+                        <input type=text id="bio" required pattern="[а-я]{4-30}"> </td>
+                </tr>
+                <tr>
+                    <td id="left">По-батькові</td>
+                    <td id="right">
+                        <input type=text id="bio" pattern="[а-я]{4-30}"> </td>
+                </tr>
+                <tr>
+                    <td id="left"> Електронна пошта* </td>
+                    <td id="right">
+                        <input type="email" id="email" placeholder="example@gmail.com" required> </td>
+                </tr>
+                <tr>
+                    <td id="left"> Номер телефону </td>
+                    <td id="right">
+                        <input type=tel id="tel" placeholder="(+380-)" value="+380" pattern="+[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{3}"> </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset id="fs2">
+            <legend> Про компанію </legend>
+            <table>
+                <tr>
+                    <td id="left">Назва компанії*</td>
+                    <td id="right">
+                        <input type=text id="company" required alt=""> </td>
+                </tr>
+                <tr>
+                    <td id="left">Місто*</td>
+                    <td id="right">
+                        <input type=text id="city" required pattern="[а-я]{3-30}" alt=""> </td>
+                </tr>
+                <tr>
+                    <td id="left">Район*</td>
+                    <td id="right">
+                        <select name="select" size="1" id="area" required>
+                            <option>Район №1</option>
+                            <option>Район №2</option>
+                            <option>Район №3</option>
+                            <option>Район №4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="left"> Способ надання послуг компанією</td>
+                    <td id="right">
+                        <input type="radio" name="comp" id="mail-options"> Фізично
+                        <br>
+                        <input type="radio" name="comp" id="mail-options"> Віртуально
+                        <br>
+                        <input type="radio" name="comp" id="mail-options"> Гібридно
+                        <br> </tr>
+                <tr>
+                    <td> &#126;Кількість штатів </td>
+                    <td>
+                        <input type="number" id="emp"> </td>
+                </tr>
+                <tr>
+                    <td> &#126;Кількість робітників</td>
+                    <td>
+                        <input type="number" id="emp"> </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset id="fs3">
+            <legend>Звернення</legend>
+            <table border="0">
+                <tr>
+                    <td id="left">За методом*</td>
+                    <td id="right" align=right>
+                        <select name="select" size="1" id="topic" required>
+                            <option> Важко відповісти</option>
+                            <option>Експертний консалтинг</option>
+                            <option>Процесний консалтинг</option>
+                            <option>Навчальний консалтинг</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="left">Предмет*</td>
+                    <td id="right" align=right>
+                        <select name="select" size="3" id="topic" required multiple>
+                            <option>ІТ-консалтинг</option>
+                            <option>Керувальницький консалтинг</option>
+                            <option>Маркетинговий консалтинг</option>
+                            <option>Екологічний консалтинг</option>
+                            <option>HR консалтинг</option>
+                            <option>Юридичний консалтинг</option>
+                            <option>У області корпоративного навчання консалтинг</option>
+                            <option>Військовий консалтинг</option>
+                            <option>Стратегічний консалтинг</option>
+                            <option>Експорт-консалтинг</option>
+                            <option> Важко відповісти</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="left">За локалізацією*</td>
+                    <td id="right" align=right>
+                        <select name="select" size="1" id="topic" required>
+                            <option>Зовнішній консалтинг</option>
+                            <option>Внутрішній консалтинг</option>
+                            <option>Міжнародний консалтинг</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="left">Опис*</td>
+                    <td id="right">
+                        <textarea id="txtarea" rows="5" cols="40" placeholder="Опишіть свою проблему тут" required></textarea>
+                </tr>
+                <tr>
+                    <td id="left">Додаткові відомості <sub>фото або ел.документи</sub></td>
+                    <td id="right">
+                        <input type="file" id="file" accept=".docx, .doc, .pdf, .png, .jpeg, .jpg" multiple alt="Документи формату ДОК"> </tr>
+            </table>
+        </fieldset>
+        <input type="image" name="image" id="imagetype" src="case-icon-png-2674.png" width="50">
+        <input type="reset" name="reset" id="reset" value="Очистити форму"> </form>
+</body>
+
+</html>

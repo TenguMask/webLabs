@@ -1,0 +1,41 @@
+  <table border="1">
+
+  <caption>Уровень продаж карандашей</caption>
+
+  <colgroup span="3">
+    <col width="40%" align="center" />
+    <col width="30%" />
+    <col width="30%" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Месяц</th>
+      <th>Продано</th>
+      <th>Выручка</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <td>Период продаж</td>
+      <td>Количество штук</td>
+      <td>Доход в у.е.</td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr>
+      <td>Июнь</td>
+      <td>30.000</td>
+      <td>100</td>
+    </tr>
+
+    <tr>
+      <td>Июль</td>
+      <td>60.000</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+
+</table>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+}
+
+#dbc{
+    width:  150px;
+}
+
+h1 {
+    text-align: center;
+}
+
+th {
+    color: #333131;
+    border: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: #535352;
+}
+
+a:hover {
+    color: #57107c;
+    transition-duration: 0.3s;
+    font-weight: bolder;
+}
+
+#locked:hover{
+
+    cursor: not-allowed;
+    background-color: rgba(255, 0, 0, 0.63);
+}
+
+table,
+tr,
+td {
+    font-weight: 450;
+    min-width: 100px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#labels {
+    float: left;
+    width: 150px;
+    line-height: 30px;
+}
+
+input {
+    margin: 5 0 5 0;
+    min-width: 150px;
+}
+
+#inputs {
+    float: left;
+    line-height: 30px;
+
+}
+
+#filler {
+    float: left;
+    width: 100%;
+    background-color: aqua;
+}
+
+#saveb{
+      font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: #8b2d2d;
+}
+
+#save {
+    margin-top: 10px;
+    margin-left: 75px;
+    float: left;
+}

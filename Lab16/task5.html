@@ -1,0 +1,55 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script type="text/javascript">
+        function second_passed() {
+
+
+
+            secs = document.getElementById("secs").innerHTML;
+            secs = secs * 1 + 1;
+            mins = document.getElementById("mins").innerHTML;
+            if (secs == 60) {
+                secs = 0;
+                mins = mins * 1 + 1;
+                if (mins < 10) {
+                    mins = "0" + mins;
+                }
+            }
+            if (secs < 10) {
+                secs = "0" + secs;
+            }
+            document.getElementById("secs").innerHTML = secs;
+            document.getElementById("mins").innerHTML = mins;
+            // document.getElementById("tablo").innerHTML = m;
+            tid = setTimeout(second_passed, 100);
+        }
+
+        function timer() {
+            tid = setTimeout(second_passed, 100);
+        }
+
+        function timer_stop() {
+            clearTimeout(tid);
+        }
+
+        function timer_reset(){
+            timer_stop();
+            document.getElementById("secs").innerHTML = "00";
+            document.getElementById("mins").innerHTML = "00";
+
+        }
+    </script>
+    <form>
+        <div id="timer" style="background-color: #99ff33; width: 60px;font-size: 20px; float: left;"> <span id="mins">00</span> : <span id="secs">00</span> </div>
+    </form>
+    <br>
+    <br>
+    <input type="button" value="Start" onclick="timer()">
+    <input type="button" value="Pause" onclick="timer_stop()">
+    <input type="button" value="Reset" onclick="timer_reset()">
+    </body>
+
+</html>

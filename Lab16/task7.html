@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+
+        var secLimit = 10;
+        var secs = document.getElementById("secs").innerHTML;
+
+        function clear() {
+            var counterDiv = document.getElementById("counter");
+            var resDiv = document.getElementById("res");
+            var img = document.getElementById("img");
+            var missDiv = document.getElementById("missdiv");
+
+            counterDiv.style.display = "none";
+            resDiv.style.display = "none";
+            img.style.display = "none";
+            missDiv.display = "none";
+        }
+
+        function hit() {
+            var hit = document.getElementById("hit").innerHTML;
+            if (secs == secLimit) {} else {
+                hit = hit * 1 + 1;
+            }
+            document.getElementById("hit").innerHTML = hit;
+
+            var img = document.getElementById("img");
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var pictureWidth = document.getElementById("img").width;
+            var pictureHeight = document.getElementById("img").height;
+            var left = Math.ceil(Math.random() * (windowWidth - pictureWidth));
+            var top = Math.ceil(Math.random() * (windowHeight - pictureHeight));
+            img.style.left = left + "px";
+            img.style.top = top + "px";
+        }
+
+        function miss() {
+            var miss = document.getElementById("miss").innerHTML;
+            if (secs == secLimit) {
+            } else {
+                miss = miss * 1 + 1;
+            }
+            document.getElementById("miss").innerHTML = miss;
+        }
+
+        function start() {
+            var counterDiv = document.getElementById("counter");
+            var img = document.getElementById("img");
+            var missDiv = document.getElementById("missdiv");
+            counterDiv.style.display = "block";
+            img.style.display = "block";
+            missDiv.display = "block";
+            var miss = document.getElementById("miss").innerHTML;
+            document.getElementById("hit").innerHTML = 0;
+            document.getElementById("miss").innerHTML = 0;
+            timer();
+        }
+
+        function second_passed() {
+            secs = document.getElementById("secs").innerHTML;
+            secs = secs * 1 + 1;
+
+            document.getElementById("secs").innerHTML = secs;
+
+            tid = setTimeout(second_passed, 1000);
+
+            if (secs == secLimit) {
+                timer_stop();
+                var resDiv = document.getElementById("res");
+                resDiv.style.display = "block";
+                clicks();
+            }
+        }
+
+        function timer_stop() {
+            clearTimeout(tid);
+        }
+
+        function timer() {
+            tid = setTimeout(second_passed, 1000);
+        }
+
+        function clicks() {
+
+            var hit = document.getElementById("hit").innerHTML;
+            var miss = document.getElementById("miss").innerHTML;
+
+            var clicks = hit * 1 + miss * 1;
+            var clicksPerSec = clicks / 10;
+
+            document.getElementById("clicks").innerHTML = clicks;
+            document.getElementById("clicksPerSec").innerHTML = clicksPerSec.toFixed(2);
+        }
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="clear()">
+    <!--    <div id="counter"> <span id="hit">0</span> <span id="miss">0</span> </div>-->
+    <button id="start" onclick="start()">STARt</button>
+
+
+    <div id="counter"> Hit Miss:
+        <br>
+        <div id="hit">0</div>
+        <div id="miss">0</div>
+        <br>
+        <div id="t">Timer: &nbsp;</div>
+        <div id="secs">0</div>
+        <br><br>
+
+        <div id="res">
+            <div id="result">Total: &nbsp; </div>
+            <div id="clicks"> 0 </div>
+            <br>
+            <div id="result">Per sec: &nbsp;</div>
+            <div id="clicksPerSec"> 0 </div>
+        </div>
+    </div>
+
+
+    <div id="missdiv" onclick="miss()"></div> <img id="img" src="/pics/wonder-day-among-us-21.png" onclick="hit()">
+</body>
+
+</html>

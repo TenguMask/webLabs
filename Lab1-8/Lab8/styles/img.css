@@ -1,0 +1,16 @@
+.forimg{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    overflow:scroll;
+}
+
+html, body {
+
+ scrollbar-3dlight-color:red;
+ scrollbar-arrow-color:yellow;
+ scrollbar-highlight-color: aqua;
+ scrollbar-face-color:green;
+ scrollbar-shadow-color:fuchsia;
+ scrollbar-darkshadow-color:blue;
+ scrollbar-track-color: maroon;

@@ -1,0 +1,54 @@
+.frmtbl {
+    border-color: red;
+    border-collapse: collapse;
+}
+
+.frmtbl thead {
+    font-family: cursive;
+    font-size: 1.1em;
+}
+
+.frmtbl tbody {
+    text-align: center;
+    color: #3304fb;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.frmtbl tfoot {
+    text-align: right;
+    font-family: fantasy;
+    font-size: 0.9em;
+}
+
+.list {
+    margin-left: 50px;
+}
+
+.list ul.a {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(../images/images.jpeg);
+}
+
+.list ul.b {
+    list-style-type: armenian;
+    list-style-position: inside;
+    list-style-image: url(../images/images2.jpeg);
+}
+
+.list ul.c {
+    list-style-position: inside;
+}
+
+.list ul.c li#c1 {
+    list-style-image: url(../images/images.jpeg);
+}
+
+.list ul.c li#c2 {
+    list-style-image: url(../images/images2.jpeg);
+}
+
+.list ul.c li#c3 {
+    list-style-image: url(../images/images3.jpeg);
+}

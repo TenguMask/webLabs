@@ -1,0 +1,31 @@
+.left-upper-corner {
+    background: url(../images/panel_top_left.gif);
+    height: 100px;
+    width: 200px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-color: #74c440;
+    float: left;
+}
+
+.right-upper-corner {
+    background: url(../images/panel_top_right.gif) top right no-repeat;
+    float: left;
+}
+
+.right-bottom-corner {
+    background: url(../images/panel_bottom_right.gif) bottom right no-repeat;
+    float: left;
+}
+
+.left-bottom-corner {
+    background: url(../images/panel_bottom_left.gif) bottom left no-repeat;
+    height: 100px;
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(102, 51, 153, 0.09);
+}

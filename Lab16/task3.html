@@ -1,0 +1,76 @@
+<head>
+    <meta charset="utf-8">
+    <title>Lab16</title>
+    <script type="text/javascript">
+        function add5() {
+            var error = "";
+
+            var x1 = document.getElementById("in1").value;
+            if (x1.length == 0) {
+                var ctn1 = document.createTextNode("Ошибка - Ничего не введено");
+                error = error + " 1 ";
+            }
+            else {
+                var ctn1 = document.createTextNode(x1);
+            }
+            var x2 = document.getElementById("in2").value;
+            if (x2.length == 0) {
+                var ctn2 = document.createTextNode("Ошибка - Ничего не введено");
+                error = error + " 2 ";
+            }
+            else {
+                var ctn2 = document.createTextNode(x2);
+            }
+            var x3 = document.getElementById("in3").value;
+            if (x3.length == 0) {
+                var ctn3 = document.createTextNode("Ошибка - Ничего не введено");
+                error = error + " 3 ";
+            }
+            else {
+                var ctn3 = document.createTextNode(x3);
+            }
+            var cep = document.createElement('p');
+            var cebr = document.createElement('br');
+            var cebr2 = document.createElement('br');
+            var cebr3 = document.createElement('br');
+            var ctnerr = document.createTextNode("Ошибки в полях: " + error);
+            //var ctnerr = document.createTextNode();
+            document.body.appendChild(cep);
+            cep.appendChild(ctn1);
+            cep.appendChild(cebr);
+            cep.appendChild(ctn2);
+            cep.appendChild(cebr2);
+            cep.appendChild(ctn3);
+            cep.appendChild(cebr3);
+
+            if (error.length == 0) {}
+            else {
+                cep.appendChild(ctnerr);
+            }
+
+            this.theForm.submit();
+            //document.theForm.submit();
+
+
+           // document.getElementById("in1").value = "";
+           // document.getElementById("in2").value = "";
+          //  document.getElementById("in3").value = "";
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="theForm" target="_blank" method="post" action="task3.php">
+        <input id="in1" type="text" name="input1"> &nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="Add a line" onclick="add5();" />
+
+        <input type="submit" onclick="add5();">
+        <br>
+        <input id="in2" type="text" name="input2">
+        <br>
+        <input id="in3" type="text" name="input3"> </form>
+    <!--    <select id="ss"> </select>-->
+</body>
+
+</html>

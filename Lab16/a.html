@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function hit() {
+            var hit = document.getElementById("hit").innerHTML;
+            hit = hit * 1 + 1;
+            document.getElementById("hit").innerHTML = hit;
+
+            var img = document.getElementById("img");
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var pictureWidth = document.getElementById("img").width;
+            var pictureHeight = document.getElementById("img").height;
+
+            var left = Math.ceil(Math.random() * (windowWidth - pictureWidth));
+            var top = Math.floor(Math.random() * (windowHeight - pictureHeight));
+
+            img.style.left = left + "px";
+            img.style.top = top + "px";
+
+
+        }
+
+        function miss() {
+            var miss = document.getElementById("miss").innerHTML;
+            miss = miss * 1 + 1;
+            document.getElementById("miss").innerHTML = miss;
+        }
+    </script>
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <!--    <div id="counter"> <span id="hit">0</span> <span id="miss">0</span> </div>-->
+    <div id="counter"> Hit Miss:
+        <br>
+        <div id="hit">0</div>
+        <div id="miss">0</div>
+
+    </div>
+    <div id="missdiv" onclick="miss()"></div> <img id="img" src="/pics/wonder-day-among-us-21.png" onclick="hit()"> </body>
+
+</html>

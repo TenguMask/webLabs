@@ -1,0 +1,31 @@
+<html>
+
+<head> </head>
+
+<body>
+    <script type="text/javascript">
+        function second_passed() {
+            t = document.getElementById("tablo").innerHTML;
+            t = t*1+ 1;
+
+
+            document.getElementById("tablo").innerHTML = t;
+            tid = setTimeout(second_passed, 1000);
+        }
+
+        function timer() {
+            tid = setTimeout(second_passed, 1000);
+        }
+
+        function timer_stop() {
+            clearTimeout(tid);
+        }
+    </script>
+    <form>
+        <div id="tablo" style="background-color: #99ff33; width: 50px;font-size: 20px;"> 0 </div>
+    </form>
+    <input type="button" value="Start" onclick="timer()">
+    <input type="button" value="Stop" onclick="timer_stop()">
+    </body>
+
+</html>

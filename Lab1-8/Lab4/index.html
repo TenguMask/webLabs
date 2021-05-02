@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta name="author" content="Nikolaienko Artem 122-19sk-1">
+    <meta name="description" content="Lab#3 - Forms">
+    <meta name="keywords" content="html forms">
+    <meta http-equiv="refresh" content="1200">
+    <meta http-equiv="content-type" content="text/html">
+    <title> Lab#4 </title>
+    <style>
+        input[type=text]#name,
+        #password,
+        #suggestions {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        select#comp-choice {
+            overflow: hidden;
+            width: 200px;
+        }
+
+        input[type=text]#reg-year {
+            max-width: 135px;
+        }
+
+        sub {
+            color: #333333;
+            line-height: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table width=100%>
+            <tr>
+                <td width=35%>
+                    <label for="name"> <b>Ваше ім'я:</b></label>
+                    <br>
+                    <br> </td>
+                <td>
+                    <input type="text" id="name" required placeholder="nickname"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password"> <b>Пароль:</b></label>
+                    <br> <sub> &#40;може містити тільки цифри та <br>букви латинського алфавіту&#41;</sub>
+                    <br> </td>
+                <td>
+                    <input type=password id="password" required minlength="8" maxlength="64" pattern="[0-9,a-z]{8,64}"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="regdate"><b> Дата реєстрації:</b> </label>
+                    <br> </td>
+                <td>
+                    <select name="select" size="1" id="reg-number" required>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>18</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                    <select name="select" size="1" id="reg-month" required>
+                        <option>Січень</option>
+                        <option>Лютий</option>
+                        <option>Березень</option>
+                        <option>Квітень</option>
+                        <option>Травень</option>
+                        <option>Червень</option>
+                        <option>Липень</option>
+                        <option>Серпень</option>
+                        <option>Вересень</option>
+                        <option>Жовтень</option>
+                        <option>Листопад</option>
+                        <option>Грудень</option>
+                    </select>
+                    <input type="text" minlength="4" maxlength="4" id="reg-year" required placeholder="year in numeric format" pattern="[0-9]{4}"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sex"> <b>Стать</b> </label>
+                </td>
+                <td>
+                    <input type="radio" name="sex" id="sex"> Чоловіча
+                    <br>
+                    <input type="radio" name="sex" id="sex"> Жіноча </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" checked=checked id="mail-checkbox"> <b>Так, я бажаю отримувати новини з вашої організації </b></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td><b>Скільки листів в день ви звичайно отримуєте?</b></td>
+                <td>
+                    <input type="radio" name="letters" id="mail-options"> Один-два
+                    <br>
+                    <input type="radio" name="letters" id="mail-options"> До 10
+                    <br>
+                    <input type="radio" name="letters" id="mail-options"> Дуже багато
+                    <br> </td>
+            </tr>
+            <tr>
+                <td><b>Вкажіть, яким компютерним напрямком ви зацікавлені</b></td>
+                <td>
+                    <select name="comp" size=6 multiple id="comp-choice" required>
+                        <option id="comp-choice-sub">Комп'ютерна графіка</option>
+                        <option id="comp-choice-sub">Проектування</option>
+                        <option id="comp-choice-sub">Програмування</option>
+                        <option id="comp-choice-sub">Набір тексту</option>
+                        <option id="comp-choice-sub">Игри</option>
+                        <option id="comp-choice-sub">Спілкування в мережіі</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Ваші побажання до роботи поштової системи</b></td>
+                <td>
+                    <textarea rows="7" cols="30" id="suggestions"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Аватарка</b>
+                    <br> <sub> &#40;розміром 100 х 100&#41;</sub>
+                    <br>
+                    <br> </td>
+                <td>
+                    <input type="file" id="pfp" accept=".jpg, .jpeg, .png"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type=submit id="button-submit" value="Надіслати дані">
+                    <input type=reset id="button-reset" value="Очистити форму"> </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

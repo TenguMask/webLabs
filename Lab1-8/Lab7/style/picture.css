@@ -1,0 +1,29 @@
+img {
+    min-width: 150px;
+    width: 15%;
+}
+
+#pic1 {
+    opacity: 0.5;
+}
+
+#pic3 {
+    filter: hue-rotate(250deg);
+    filter: blur(7px)
+}
+
+#pic1:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#pic2:hover {
+    filter: hue-rotate(250deg);
+    transition-duration: 0.7s;
+    width: 17%;
+    cursor: cell;
+}
+
+#pic3:hover {
+    filter: none;
+}
